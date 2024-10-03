@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Registration Form</title>
+  
+  <!-- Custom Styles (You can add your own CSS here) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="registration-form">
+    <h1>Registration</h1>
+    <form action="register.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <input type="hidden" name="replit_user_id" value="<?php echo $_GET['replit_user_id']; ?>">
+      <input type="hidden" name="replit_user_name" value="<?php echo $_GET['replit_user_name']; ?>">
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Include Replit Auth script (if needed) -->
+  <script src="https://auth.util.repl.co/script.js"></script>
+</body>
+</html>
